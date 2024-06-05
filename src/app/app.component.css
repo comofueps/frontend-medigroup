@@ -1,0 +1,36 @@
+
+main {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 250px repeat(2, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas:
+    "header header header"
+    "aside section section"
+    "footer footer footer";
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+}
+
+header {
+  grid-area: header;
+  /* background-color: aqua; */
+
+}
+
+aside {
+  grid-area: aside;
+  /* background-color: blue; */
+}
+
+section {
+  margin-left: 15px;
+  grid-area: section;
+
+  /* margin: 15px; */
+  /* background-color: aquamarine; */
+}
+
+footer {
+  grid-area: footer;
+  /* background-color: bisque; */
+}

@@ -1,0 +1,102 @@
+/* Estilos para el contenedor del formulario */
+.contenedor {
+    width: 100%;
+    padding: 20px;
+    background-color: #F8F9FA;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: flex;
+  
+  }
+
+  .contenedor .contenedor-titulo{
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    font: bold;
+  }
+  
+  .contenedor form{
+    width: 400px;
+    height: fit-content;
+    padding: 20px;
+    margin: 10px auto ;
+    border: 1px solid #ccc;
+    border-radius: 5px;  
+  }
+  
+  .contenedor form h2{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el título del formulario */
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para las etiquetas de los campos */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos para los campos de entrada */
+  input[type="text"],[type="email"],[type="password"], [type="number"],input[type="date"],select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+  
+  }
+  
+  /* Estilos para el botón de enviar */
+  button[type="submit"],[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color de texto del botón */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  
+  }
+
+  button[type="submit"]:disabled{
+    background-color: #CED4DA;
+  }
+  
+  /* Estilos para el botón de enviar al pasar el mouse */
+  button:hover {
+    background-color: #2d2da5;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .cancelar{
+    margin-top: 10px;
+    background-color: #F50057;
+    transition: background-color 0.3s ease;
+  }
+
+  .cancelar:hover{
+    background-color: #d50045;
+  }
+  
+  input:focus {
+  
+    border-color: #007bff;
+  
+  }

@@ -1,0 +1,48 @@
+<div class="card">
+  <p-table
+    [value]="usuarioDetalles"
+    styleClass="p-datatable-striped"
+    [tableStyle]="{ 'min-width': '50rem' }"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th hidden>id</th>
+        <th>Fecha</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Peso inicial (kg)</th>
+        <th>Objetivos</th>
+        <th>IMC</th>
+        <th>Nivel de peso</th>
+        <th>Calorias consumidas</th>
+        <th>Calorias quemadas</th>
+        <th>Balance calorico</th>
+
+        <!-- <th colspan="2">Acciones</th> -->
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-usuarioDetalle>
+      <tr>
+        <td hidden>{{ usuarioDetalle._id }}</td>
+        <td>{{ usuarioDetalle.fecha }}</td>
+        <td>{{ usuarioDetalle.user_id.nombre }}</td>
+        <td>{{ usuarioDetalle.user_id.apellido }}</td>
+        <td>{{ usuarioDetalle.user_id.peso_inicial }}</td>
+        <td>{{ usuarioDetalle.user_id.objetivos }}</td>
+        <td>{{ usuarioDetalle.imc }}</td>
+        <td>{{ usuarioDetalle.nivel_peso }}</td>
+        <td>{{ usuarioDetalle.calorias_consumidas }}</td>
+        <td>{{ usuarioDetalle.calorias_quemadas }}</td>
+        <td>{{ usuarioDetalle.balance_calorico }}</td>
+
+        <!-- <td>{{ usuarioDetalle.user_id.altura }}</td> -->
+
+        <!-- <td>
+            <div class="card flex justify-content-center gap-3">
+              <p-button label="Ver progreso" icon="pi pi-search" (onClick)="alerta2(usuarioDetalle._id)" />
+            </div>
+          </td> -->
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

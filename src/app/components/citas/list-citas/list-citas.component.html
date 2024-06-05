@@ -1,0 +1,39 @@
+<div class="card">
+    <h2 class="titulo">Citas</h2>
+    <p-table [value]="citas" styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th hidden rowspan="2">id</th>
+                <th rowspan="2">Nombre</th>
+                <th rowspan="2">Apellido</th>
+                <th rowspan="2">Tipo</th>
+                <th rowspan="2">Estado</th>
+                <th rowspan="2">Fecha</th>
+                <th colspan="3" class="thtitulo">Número de citas disponibles </th>
+                <th rowspan="2">acciones</th>
+            </tr>
+            <tr>
+                <th hidden></th>
+                <th>Medicina general</th>
+                <th>Psicologia</th>
+                <th>Especialista</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cita>
+            <tr>
+                <td hidden>{{ cita._id }}</td>
+                <td>{{ cita.user_id.nombre }}</td>
+                <td>{{ cita.user_id.apellido }}</td>
+                <td>{{ cita.tipo }}</td>
+                <td>{{ cita.estado }}</td>
+                <td>{{ cita.fecha }}</td>
+                <td>{{ cita.user_id.citas.medicina_general }}</td>
+                <td>{{ cita.user_id.citas.psicologia }}</td>
+                <td>{{ cita.user_id.citas.especialista }}</td>
+                <td>btn</td>
+
+
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

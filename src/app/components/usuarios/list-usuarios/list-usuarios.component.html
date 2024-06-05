@@ -1,0 +1,67 @@
+<div class="card">
+  <h2 class="titulo">Usuarios</h2>
+  <p-table
+    [value]="usuarios"
+    styleClass="p-datatable-striped"
+    [tableStyle]="{ 'min-width': '50rem' }"
+  >
+    <ng-template pTemplate="header">
+      <tr>
+        <th hidden>id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Genero</th>
+        <th>Edad</th>
+        <th>Peso (kg)</th>
+        <th>Estatura (cm)</th>
+        <th>Objetivos</th>
+        <th colspan="3" class="centrar">Acciones</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-usuario>
+      <tr>
+        <td hidden>{{ usuario._id }}</td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td>{{ usuario.genero }}</td>
+        <td>{{ usuario.edad }}</td>
+        <td>{{ usuario.peso_inicial }}</td>
+        <td>{{ usuario.altura }}</td>
+        <td>{{ usuario.objetivos }}</td>
+
+        <td>
+          <div class="card flex justify-content-center gap-3">
+            <p-button
+              label="Ver progreso"
+              icon="pi pi-search"
+              size="small"
+              (onClick)="alerta2(usuario._id)"
+            />
+          </div>
+        </td>
+        <td>
+          <div class="card flex justify-content-center gap-3">
+            <p-button
+              label="Agendar cita"
+              icon="pi pi-calendar-plus"
+              size="small"
+              severity="warning"
+              [routerLink]="['/citas', usuario._id]"
+            />
+          </div>
+        </td>
+        <td>
+          <div class="card flex justify-content-center gap-3">
+            <p-button
+              label="Asignar rutina"
+              icon="pi pi-list-check"
+              size="small"
+              severity="success"
+              [routerLink]="['/rutinas', usuario._id]"
+            />
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

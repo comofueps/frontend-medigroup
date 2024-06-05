@@ -1,0 +1,38 @@
+<div class="contenedor">
+  <form (submit)="onSubmit()">
+    <div class="contenedor-titulo">
+      <h2>Registrar cita</h2>
+    </div>
+    <div>
+      <label for="nombre">Nombre del paciente</label>
+      <input disabled placeholder="Nombre " type="text" id="nombre" required />
+    </div>
+    <div>
+      <label for="nombre">Apellido del paciente</label>
+      <input
+        disabled
+        placeholder="Apellido "
+        type="text"
+        id="apellido"
+        required
+      />
+    </div>
+    <div>
+      <label for="tipo">Tipo de cita</label>
+      <select name="tipo" id="tipo">
+        <option value="" disabled selected>Seleccione el tipo de cita</option>
+        <option value="medicina_general">Medicina general</option>
+        <option value="psicologia">Psicologia</option>
+        <option value="especialista">especialista</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="nombre">Fecha</label>
+      <input type="date" id="fecha" required />
+    </div>
+
+    <button type="submit">Enviar</button>
+    <button class="cancelar" type="button" (click)="cancel()">Cancelar</button>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+.card .titulo{
+    font-family: 'Roboto',sans-serif;
+    padding: 2px;
+    margin: 15px;
+}
+
+.thtitulo{
+    align-items: center;
+    text-align: center;
+}
+

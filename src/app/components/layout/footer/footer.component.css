@@ -1,0 +1,16 @@
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  vertical-align: center;
+}
+
+.footer {
+  color: #37423b;
+  font-size: 16px;
+  background: #eef0ef;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

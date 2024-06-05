@@ -1,0 +1,9 @@
+.card .titulo{
+    font-family: 'Roboto',sans-serif;
+    padding: 2px;
+    margin: 15px;
+}
+
+.card .centrar{
+    text-align: center;
+}
